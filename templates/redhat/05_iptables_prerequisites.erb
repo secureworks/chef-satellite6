@@ -1,0 +1,13 @@
+-A INPUT -m state --state NEW -p udp --dport 53 -j ACCEPT
+-A INPUT -m state --state NEW -p tcp --dport 53 -j ACCEPT
+-A INPUT -m state --state NEW -p udp --dport 67 -j ACCEPT
+-A INPUT -m state --state NEW -p udp --dport 68 -j ACCEPT
+-A INPUT -m state --state NEW -p udp --dport 69 -j ACCEPT
+-A INPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
+-A INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT
+-A INPUT -m state --state NEW -p tcp --dport 5000 -j ACCEPT
+-A INPUT -m state --state NEW -p tcp --dport 5671 -j ACCEPT
+-A INPUT -m state --state NEW -p tcp --dport 5647 -j ACCEPT
+-A INPUT -m state --state NEW -p tcp --dport 8080 -j ACCEPT
+-A INPUT -m state --state NEW -p tcp --dport 8140 -j ACCEPT
+-A INPUT -m state --state NEW -p tcp --dport 9090 -j ACCEPT

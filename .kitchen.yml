@@ -1,0 +1,32 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+suites:
+  - name: default
+    run_list:
+      - recipe[satellite6::default]
+    attributes:
+    data_bags_path: 'test/integration/data_bags'
+    roles_path: 'test/integration/roles'
+  - name: client
+    run_list:
+      - recipe[satellite6::client]
+    attributes:
+    data_bags_path: 'test/integration/data_bags'
+    roles_path: 'test/integration/roles'
+  - name: server
+    run_list:
+      - recipe[satellite6::server]
+    attributes:
+    data_bags_path: 'test/integration/data_bags'
+    roles_path: 'test/integration/roles'
+  - name: capsule
+    run_list:
+      - recipe[satellite6::capsule]
+    attributes:
+    data_bags_path: 'test/integration/data_bags'
+    roles_path: 'test/integration/roles'

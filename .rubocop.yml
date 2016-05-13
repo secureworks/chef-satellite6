@@ -1,0 +1,14 @@
+AllCops:
+  Exclude:
+    - vendor/**
+    - metadata.rb
+    - Guardfile
+    - Rakefile
+    - test/cookbooks/apt_test/metadata.rb
+    - .kitchen/**
+Metrics/LineLength:
+  Max: 120
+Metrics/BlockNesting:
+  Enabled: False
+Style/FileName:
+  Enabled: False

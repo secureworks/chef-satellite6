@@ -1,0 +1,3 @@
+-A OUTPUT -o lo -p tcp -m tcp --dport 9200 -m owner --uid-owner foreman -j ACCEPT
+-A OUTPUT -o lo -p tcp -m tcp --dport 9200 -m owner --uid-owner root -j ACCEPT
+-A OUTPUT -o lo -p tcp -m tcp --dport 9200 -j DROP
