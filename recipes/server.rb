@@ -129,7 +129,7 @@ execute 'katello-installer' do
 end
 
 # Even though it's passed the -d flag, puppet still reads in the .yml, reformats it, writes it back out
-# So to keep from regenerating everytime, we need to actually compare the two.
+# So to keep from regenerating every time, we need to actually compare the two.
 answers_file = '/etc/katello-installer/answers.katello-installer.yaml'
 puppet_guard1 = node['katello']['server']['conf'].to_h
 puppet_guard2 = YAML.load_file(answers_file).to_h if File.exist?(answers_file)
